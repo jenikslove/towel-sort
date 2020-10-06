@@ -5,12 +5,14 @@ module.exports = function towelSort (matrix) {
     if (!matrix) {
         return [];
           }else {
-            let strArr = matrix.join(',').split(",");
-            arr = [];
-            strArr.forEach(el => {
-             el = arr.push(+el);
-           })
-          }
-           
-        return arr.sort(function(a, b){return a - b});
+            let arr = []
+    for(var i = 0; i < matrix.length; i++) {
+      if(i!= 0 && i % 2) {
+         arr[i] = matrix[i].reverse()
+      } else {
+      arr[i] = matrix[i];
+      }
+    }
+    return arr.reduce((result, element) => result.concat(element),[]);
+}
 }
