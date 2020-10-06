@@ -4,9 +4,9 @@
 module.exports = function towelSort (matrix) {
     if (!matrix) {
         return [];
-          }else {
-            let arr = []
-    for(var i = 0; i < matrix.length; i++) {
+    }else {
+    let arr = []
+    for(let i=0; i<matrix.length; i++) {
       if(i!= 0 && i % 2) {
          arr[i] = matrix[i].reverse()
       } else {
